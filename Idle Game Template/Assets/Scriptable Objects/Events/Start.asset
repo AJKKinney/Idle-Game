@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c630af8f56916f49b3d5fa93c48235a, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  eventName: Start
+  eventDescription: 
+  eventImage: {fileID: 0}
+  rightInteractionDescription: 
+  rightInteractionEffects:
+  - effectType: 0
+    resourceType: 0
+    amount: 1000
+    dialogue: {fileID: 0}
+  leftInteractionDescription: 
+  leftInteractionEffects:
+  - effectType: 3
+    resourceType: 0
+    amount: 0
+    dialogue: {fileID: 11400000, guid: cab0c5f0b938569458de408301c79d83, type: 2}

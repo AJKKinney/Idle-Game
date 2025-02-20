@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9531df22064e364ab9dabec103d5ed7, type: 3}
+  m_Name: New Dialogue
+  m_EditorClassIdentifier: 
+  dialogueChunks:
+  - dialogueText: Hello?
+    speakerData: {fileID: 11400000, guid: c00e6c258ec84c64cb6a4f5f888a74c7, type: 2}
+  - dialogueText: ...
+    speakerData: {fileID: 11400000, guid: c00e6c258ec84c64cb6a4f5f888a74c7, type: 2}
+  - dialogueText: Oh... It's you.
+    speakerData: {fileID: 11400000, guid: c00e6c258ec84c64cb6a4f5f888a74c7, type: 2}
+  - dialogueText: Let's get started then.
+    speakerData: {fileID: 11400000, guid: c00e6c258ec84c64cb6a4f5f888a74c7, type: 2}
