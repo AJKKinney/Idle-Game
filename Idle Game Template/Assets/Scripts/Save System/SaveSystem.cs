@@ -15,11 +15,6 @@ public static class SaveSystem
     { 
         get 
         {
-            if (currentSave == null)
-            {
-                currentSave = LoadGame();
-            }
-
             return currentSave;
         } 
         set => currentSave = value; 
@@ -37,30 +32,32 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
-
     }
 
-    public static SaveData LoadGame()
+    public static bool LoadGame(int fileNumber, out SaveData loadedSave)
     {
+        bool hasSaveInSlot = false;
         SaveData loadedSaveData = null;
 
-        string path = saveDataPath;
+        saveDataPath = Application.persistentDataPath + "/SaveDataFile" + fileNumber.ToString() + ".save";
 
-        if(File.Exists(path))
+        if (File.Exists(saveDataPath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            FileStream stream = new FileStream(saveDataPath, FileMode.Open);
 
             loadedSaveData = (SaveData) formatter.Deserialize(stream);
 
             stream.Close();
+            hasSaveInSlot = true;
         }
         else
         {
-            Debug.Log("No save data exists at " + saveDataPath + ". Creating a new save file.");
+            Debug.Log("No save data exists at " + saveDataPath);
             loadedSaveData = new SaveData();
         }
 
-        return loadedSaveData;
+        loadedSave = loadedSaveData;
+        return hasSaveInSlot;
     }
 }
